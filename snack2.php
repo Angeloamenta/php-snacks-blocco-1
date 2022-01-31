@@ -12,6 +12,7 @@ if (empty($_GET['mail']) === false && empty($_GET['name']) === false && empty($_
     $mail = $_GET["mail"];
     if (strpos($mail, '@') !== false && strpos($mail, '.') !== false && strlen($name) > 3 && is_numeric($age) == true) {
       echo 'Accesso riuscito';
+    //   echo str_contains($mail, '@'); provato con str_contains ma risulta utilizzabile su php 8
     } else {
       echo 'Accesso negato';
     }
